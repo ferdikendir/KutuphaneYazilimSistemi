@@ -1,0 +1,50 @@
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.csprojResolveAssemblyReference.cache
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.iliskiKesme.resources
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.main.resources
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.OduncVerme.resources
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.Properties.Resources.resources
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.satinAlma.resources
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.csproj.GenerateResource.Cache
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\bin\Debug\Kutuphane.exe.config
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\bin\Debug\Kutuphane.exe
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\bin\Debug\Kutuphane.pdb
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\bin\Debug\EntityFramework.dll
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\bin\Debug\EntityFramework.xml
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.exe
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.pdb
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.tumKitap.resources
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.verilebilir_kitaplar.resources
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.verilemez_kitaplar.resources
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.RaporEkle.resources
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.yazargrup.resources
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.TurGrupla.resources
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.mevzunOgrenciler.resources
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.tumOgrenciler.resources
+C:\Users\FERDI\Desktop\Kutuphane\Kutuphane\obj\Debug\Kutuphane.MevzunOlamayanlar.resources
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\bin\Debug\Kutuphane.exe.config
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\obj\Debug\Kutuphane.exe
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\obj\Debug\Kutuphane.pdb
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\bin\Debug\Kutuphane.exe
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\bin\Debug\Kutuphane.pdb
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\bin\Debug\EntityFramework.dll
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\bin\Debug\EntityFramework.SqlServer.dll
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\bin\Debug\EntityFramework.xml
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\bin\Debug\EntityFramework.SqlServer.xml
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\obj\Debug\Kutuphane.csprojResolveAssemblyReference.cache
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\obj\Debug\Kutuphane.iliskiKesme.resources
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\obj\Debug\Kutuphane.main.resources
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\obj\Debug\Kutuphane.mevzunOgrenciler.resources
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\obj\Debug\Kutuphane.MevzunOlamayanlar.resources
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\obj\Debug\Kutuphane.OduncVerme.resources
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\obj\Debug\Kutuphane.Properties.Resources.resources
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\obj\Debug\Kutuphane.RaporEkle.resources
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\obj\Debug\Kutuphane.satinAlma.resources
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\obj\Debug\Kutuphane.tumKitap.resources
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\obj\Debug\Kutuphane.tumOgrenciler.resources
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\obj\Debug\Kutuphane.TurGrupla.resources
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\obj\Debug\Kutuphane.verilebilir_kitaplar.resources
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\obj\Debug\Kutuphane.verilemez_kitaplar.resources
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\obj\Debug\Kutuphane.yazargrup.resources
+E:\18-19_GUZ\Database Management System\Kutuphane\Kutuphane\obj\Debug\Kutuphane.csproj.GenerateResource.Cache

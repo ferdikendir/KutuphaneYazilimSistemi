@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="78666f3c1d224b85961c2c573e96c327" Name="Diagram1">
+        <EntityTypeShape EntityType="KutuphaneModel.Bolum" Width="1.5" PointX="10" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneModel.Fakulte" Width="1.5" PointX="7.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneModel.Kitap" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneModel.KutuphaneBolum" Width="1.5" PointX="5.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneModel.Ogrenci" Width="1.5" PointX="12.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneModel.Personel" Width="1.5" PointX="8" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneModel.Rapor" Width="1.5" PointX="10.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneModel.sysdiagram" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneModel.Tur" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneModel.YayinEvi" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneModel.Yazar" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="KutuphaneModel.FK_Bolum_Fakulte" ManuallyRouted="false" />
+        <AssociationConnector Association="KutuphaneModel.FK_Ogrenci_Bolum" ManuallyRouted="false" />
+        <AssociationConnector Association="KutuphaneModel.FK_Kitap_Tur" ManuallyRouted="false" />
+        <AssociationConnector Association="KutuphaneModel.FK_Kitap_Yazar" ManuallyRouted="false" />
+        <AssociationConnector Association="KutuphaneModel.FK_Personel_KutuphaneBolum" ManuallyRouted="false" />
+        <AssociationConnector Association="KutuphaneModel.FK_Rapor_Personel" ManuallyRouted="false" />
+        <AssociationConnector Association="KutuphaneModel.FK_Yazar_YayinEvi" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

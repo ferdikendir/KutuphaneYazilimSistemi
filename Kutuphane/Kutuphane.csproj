@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A864EAD2-FF72-4E8A-983D-EE07E968AE43}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kutuphane</RootNamespace>
+    <AssemblyName>Kutuphane</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\Bolum.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Fakulte.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Kitap.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\KutuphaneBolum.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Ogrenci.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Personel.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Rapor.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Tur.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\YayinEvi.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Yazar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dbislem.cs" />
+    <Compile Include="KutuphaneDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KutuphaneDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KutuphaneDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KutuphaneDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KutuphaneDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KutuphaneDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KutuphaneDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KutuphaneDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KutuphaneDataSet67.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KutuphaneDataSet67.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="iliskiKesme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iliskiKesme.Designer.cs">
+      <DependentUpon>iliskiKesme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mevzunOgrenciler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mevzunOgrenciler.Designer.cs">
+      <DependentUpon>mevzunOgrenciler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MevzunOlamayanlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MevzunOlamayanlar.Designer.cs">
+      <DependentUpon>MevzunOlamayanlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OduncVerme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OduncVerme.Designer.cs">
+      <DependentUpon>OduncVerme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RaporEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporEkle.Designer.cs">
+      <DependentUpon>RaporEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="satinAlma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="satinAlma.Designer.cs">
+      <DependentUpon>satinAlma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tumKitap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tumKitap.Designer.cs">
+      <DependentUpon>tumKitap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tumOgrenciler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tumOgrenciler.Designer.cs">
+      <DependentUpon>tumOgrenciler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TurGrupla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TurGrupla.Designer.cs">
+      <DependentUpon>TurGrupla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="verilebilir_kitaplar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="verilebilir_kitaplar.Designer.cs">
+      <DependentUpon>verilebilir_kitaplar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="verilemez_kitaplar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="verilemez_kitaplar.Designer.cs">
+      <DependentUpon>verilemez_kitaplar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yazargrup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yazargrup.Designer.cs">
+      <DependentUpon>yazargrup.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="iliskiKesme.resx">
+      <DependentUpon>iliskiKesme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mevzunOgrenciler.resx">
+      <DependentUpon>mevzunOgrenciler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MevzunOlamayanlar.resx">
+      <DependentUpon>MevzunOlamayanlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OduncVerme.resx">
+      <DependentUpon>OduncVerme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RaporEkle.resx">
+      <DependentUpon>RaporEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="satinAlma.resx">
+      <DependentUpon>satinAlma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tumKitap.resx">
+      <DependentUpon>tumKitap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tumOgrenciler.resx">
+      <DependentUpon>tumOgrenciler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TurGrupla.resx">
+      <DependentUpon>TurGrupla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="verilebilir_kitaplar.resx">
+      <DependentUpon>verilebilir_kitaplar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="verilemez_kitaplar.resx">
+      <DependentUpon>verilemez_kitaplar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yazargrup.resx">
+      <DependentUpon>yazargrup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="DAL\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DAL\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="KutuphaneDataSet.xsc">
+      <DependentUpon>KutuphaneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KutuphaneDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KutuphaneDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KutuphaneDataSet.xss">
+      <DependentUpon>KutuphaneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KutuphaneDataSet1.xsc">
+      <DependentUpon>KutuphaneDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="KutuphaneDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KutuphaneDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KutuphaneDataSet1.xss">
+      <DependentUpon>KutuphaneDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="KutuphaneDataSet2.xsc">
+      <DependentUpon>KutuphaneDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="KutuphaneDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KutuphaneDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KutuphaneDataSet2.xss">
+      <DependentUpon>KutuphaneDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="KutuphaneDataSet3.xsc">
+      <DependentUpon>KutuphaneDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="KutuphaneDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KutuphaneDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KutuphaneDataSet3.xss">
+      <DependentUpon>KutuphaneDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="KutuphaneDataSet67.xsc">
+      <DependentUpon>KutuphaneDataSet67.xsd</DependentUpon>
+    </None>
+    <None Include="KutuphaneDataSet67.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KutuphaneDataSet67.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KutuphaneDataSet67.xss">
+      <DependentUpon>KutuphaneDataSet67.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Kutuphane.DAL.Kitap.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DAL\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

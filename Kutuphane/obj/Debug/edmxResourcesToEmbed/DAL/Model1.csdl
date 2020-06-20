@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KutuphaneModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Bolum">
+    <Key>
+      <PropertyRef Name="bolumID" />
+    </Key>
+    <Property Name="bolumID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bolum1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fakulteID" Type="Int32" />
+    <NavigationProperty Name="Fakulte" Relationship="Self.FK_Bolum_Fakulte" FromRole="Bolum" ToRole="Fakulte" />
+    <NavigationProperty Name="Ogrencis" Relationship="Self.FK_Ogrenci_Bolum" FromRole="Bolum" ToRole="Ogrenci" />
+  </EntityType>
+  <EntityType Name="Fakulte">
+    <Key>
+      <PropertyRef Name="fakulteID" />
+    </Key>
+    <Property Name="fakulteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fakulte1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Bolums" Relationship="Self.FK_Bolum_Fakulte" FromRole="Fakulte" ToRole="Bolum" />
+  </EntityType>
+  <EntityType Name="Kitap">
+    <Key>
+      <PropertyRef Name="kitapID" />
+    </Key>
+    <Property Name="kitapID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="turID" Type="Int32" />
+    <Property Name="yazarID" Type="Int32" />
+    <Property Name="durum" Type="Boolean" />
+    <NavigationProperty Name="Tur" Relationship="Self.FK_Kitap_Tur" FromRole="Kitap" ToRole="Tur" />
+    <NavigationProperty Name="Yazar" Relationship="Self.FK_Kitap_Yazar" FromRole="Kitap" ToRole="Yazar" />
+  </EntityType>
+  <EntityType Name="KutuphaneBolum">
+    <Key>
+      <PropertyRef Name="kutuphanebolumID" />
+    </Key>
+    <Property Name="kutuphanebolumID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kutuphanebolum1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Personels" Relationship="Self.FK_Personel_KutuphaneBolum" FromRole="KutuphaneBolum" ToRole="Personel" />
+  </EntityType>
+  <EntityType Name="Ogrenci">
+    <Key>
+      <PropertyRef Name="ogrenciID" />
+    </Key>
+    <Property Name="ogrenciID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adi" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="soyadi" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="bolumID" Type="Int32" />
+    <Property Name="kayitYili" Type="DateTime" Precision="0" />
+    <Property Name="cinsiyet" Type="Boolean" />
+    <Property Name="mevzun" Type="Boolean" />
+    <Property Name="mevzuniyet_tarihi" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Bolum" Relationship="Self.FK_Ogrenci_Bolum" FromRole="Ogrenci" ToRole="Bolum" />
+  </EntityType>
+  <EntityType Name="Personel">
+    <Key>
+      <PropertyRef Name="personelID" />
+    </Key>
+    <Property Name="personelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adi" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="soyadi" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="kullaniciadi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="sifre" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="kutuphanebolumID" Type="Int32" />
+    <Property Name="yetki" Type="Boolean" />
+    <NavigationProperty Name="KutuphaneBolum" Relationship="Self.FK_Personel_KutuphaneBolum" FromRole="Personel" ToRole="KutuphaneBolum" />
+    <NavigationProperty Name="Rapors" Relationship="Self.FK_Rapor_Personel" FromRole="Personel" ToRole="Rapor" />
+  </EntityType>
+  <EntityType Name="Rapor">
+    <Key>
+      <PropertyRef Name="raporID" />
+    </Key>
+    <Property Name="raporID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="gerekce" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="personelID" Type="Int32" />
+    <Property Name="tarih" Type="DateTime" Precision="3" />
+    <Property Name="konu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Personel" Relationship="Self.FK_Rapor_Personel" FromRole="Rapor" ToRole="Personel" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tur">
+    <Key>
+      <PropertyRef Name="turID" />
+    </Key>
+    <Property Name="turID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tur1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Kitaps" Relationship="Self.FK_Kitap_Tur" FromRole="Tur" ToRole="Kitap" />
+  </EntityType>
+  <EntityType Name="YayinEvi">
+    <Key>
+      <PropertyRef Name="yayineviID" />
+    </Key>
+    <Property Name="yayineviID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="yayinevi_ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="kurulus" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Yazars" Relationship="Self.FK_Yazar_YayinEvi" FromRole="YayinEvi" ToRole="Yazar" />
+  </EntityType>
+  <EntityType Name="Yazar">
+    <Key>
+      <PropertyRef Name="yazarID" />
+    </Key>
+    <Property Name="yazarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="adi" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="soyadi" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="telefon" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="yas" Type="Int32" />
+    <Property Name="yayineviID" Type="Int32" />
+    <NavigationProperty Name="Kitaps" Relationship="Self.FK_Kitap_Yazar" FromRole="Yazar" ToRole="Kitap" />
+    <NavigationProperty Name="YayinEvi" Relationship="Self.FK_Yazar_YayinEvi" FromRole="Yazar" ToRole="YayinEvi" />
+  </EntityType>
+  <Association Name="FK_Bolum_Fakulte">
+    <End Role="Fakulte" Type="Self.Fakulte" Multiplicity="0..1" />
+    <End Role="Bolum" Type="Self.Bolum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fakulte">
+        <PropertyRef Name="fakulteID" />
+      </Principal>
+      <Dependent Role="Bolum">
+        <PropertyRef Name="fakulteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ogrenci_Bolum">
+    <End Role="Bolum" Type="Self.Bolum" Multiplicity="0..1" />
+    <End Role="Ogrenci" Type="Self.Ogrenci" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bolum">
+        <PropertyRef Name="bolumID" />
+      </Principal>
+      <Dependent Role="Ogrenci">
+        <PropertyRef Name="bolumID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kitap_Tur">
+    <End Role="Tur" Type="Self.Tur" Multiplicity="0..1" />
+    <End Role="Kitap" Type="Self.Kitap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tur">
+        <PropertyRef Name="turID" />
+      </Principal>
+      <Dependent Role="Kitap">
+        <PropertyRef Name="turID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kitap_Yazar">
+    <End Role="Yazar" Type="Self.Yazar" Multiplicity="0..1" />
+    <End Role="Kitap" Type="Self.Kitap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Yazar">
+        <PropertyRef Name="yazarID" />
+      </Principal>
+      <Dependent Role="Kitap">
+        <PropertyRef Name="yazarID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Personel_KutuphaneBolum">
+    <End Role="KutuphaneBolum" Type="Self.KutuphaneBolum" Multiplicity="0..1" />
+    <End Role="Personel" Type="Self.Personel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KutuphaneBolum">
+        <PropertyRef Name="kutuphanebolumID" />
+      </Principal>
+      <Dependent Role="Personel">
+        <PropertyRef Name="kutuphanebolumID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rapor_Personel">
+    <End Role="Personel" Type="Self.Personel" Multiplicity="0..1" />
+    <End Role="Rapor" Type="Self.Rapor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personel">
+        <PropertyRef Name="personelID" />
+      </Principal>
+      <Dependent Role="Rapor">
+        <PropertyRef Name="personelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Yazar_YayinEvi">
+    <End Role="YayinEvi" Type="Self.YayinEvi" Multiplicity="0..1" />
+    <End Role="Yazar" Type="Self.Yazar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="YayinEvi">
+        <PropertyRef Name="yayineviID" />
+      </Principal>
+      <Dependent Role="Yazar">
+        <PropertyRef Name="yayineviID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="KutuphaneEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bolums" EntityType="Self.Bolum" />
+    <EntitySet Name="Fakultes" EntityType="Self.Fakulte" />
+    <EntitySet Name="Kitaps" EntityType="Self.Kitap" />
+    <EntitySet Name="KutuphaneBolums" EntityType="Self.KutuphaneBolum" />
+    <EntitySet Name="Ogrencis" EntityType="Self.Ogrenci" />
+    <EntitySet Name="Personels" EntityType="Self.Personel" />
+    <EntitySet Name="Rapors" EntityType="Self.Rapor" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Turs" EntityType="Self.Tur" />
+    <EntitySet Name="YayinEvis" EntityType="Self.YayinEvi" />
+    <EntitySet Name="Yazars" EntityType="Self.Yazar" />
+    <AssociationSet Name="FK_Bolum_Fakulte" Association="Self.FK_Bolum_Fakulte">
+      <End Role="Fakulte" EntitySet="Fakultes" />
+      <End Role="Bolum" EntitySet="Bolums" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ogrenci_Bolum" Association="Self.FK_Ogrenci_Bolum">
+      <End Role="Bolum" EntitySet="Bolums" />
+      <End Role="Ogrenci" EntitySet="Ogrencis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kitap_Tur" Association="Self.FK_Kitap_Tur">
+      <End Role="Tur" EntitySet="Turs" />
+      <End Role="Kitap" EntitySet="Kitaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kitap_Yazar" Association="Self.FK_Kitap_Yazar">
+      <End Role="Yazar" EntitySet="Yazars" />
+      <End Role="Kitap" EntitySet="Kitaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Personel_KutuphaneBolum" Association="Self.FK_Personel_KutuphaneBolum">
+      <End Role="KutuphaneBolum" EntitySet="KutuphaneBolums" />
+      <End Role="Personel" EntitySet="Personels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rapor_Personel" Association="Self.FK_Rapor_Personel">
+      <End Role="Personel" EntitySet="Personels" />
+      <End Role="Rapor" EntitySet="Rapors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Yazar_YayinEvi" Association="Self.FK_Yazar_YayinEvi">
+      <End Role="YayinEvi" EntitySet="YayinEvis" />
+      <End Role="Yazar" EntitySet="Yazars" />
+    </AssociationSet>
+    <FunctionImport Name="raporEkle">
+      <Parameter Name="gerekce" Mode="In" Type="String" />
+      <Parameter Name="personel" Mode="In" Type="String" />
+      <Parameter Name="tarih" Mode="In" Type="DateTime" />
+      <Parameter Name="konu" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>
